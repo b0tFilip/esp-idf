@@ -22,6 +22,9 @@ IoT 设备通常需要检查远程服务器是否可用。如果服务器离线�
 创建 ping 会话并注册回调函数示例：
 
 .. code-block:: c
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <netdb.h>
 
     static void test_on_ping_success(esp_ping_handle_t hdl, void *args)
     {
